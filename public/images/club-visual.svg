@@ -1,0 +1,38 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" fill="#F5F2E8"/>
+  <path d="M0 540C130 490 270 507 390 528C580 562 680 617 838 571C1000 524 1062 433 1200 460V760H0V540Z" fill="#6F8F63"/>
+  <path d="M0 607C160 563 307 580 454 617C650 666 809 657 958 590C1047 550 1126 543 1200 557V760H0V607Z" fill="#294C3A"/>
+  <path d="M130 519C258 478 388 495 507 530C640 569 758 594 891 544C974 513 1055 494 1130 505" stroke="#D8C58B" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="892" cy="526" r="9" fill="#F9F8F1"/>
+  <path d="M876 496L876 434L929 446L876 458" stroke="#F9F8F1" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <g filter="url(#shadow)">
+    <rect x="114" y="118" width="326" height="340" rx="20" fill="#FCFBF7"/>
+    <rect x="144" y="154" width="266" height="44" rx="10" fill="#16251F"/>
+    <rect x="144" y="220" width="96" height="172" rx="24" fill="#E7E0CE"/>
+    <path d="M192 220C175 251 166 284 166 320V392H240V320C240 284 231 251 214 220H192Z" fill="#D7B468"/>
+    <rect x="262" y="220" width="64" height="172" rx="24" fill="#294C3A"/>
+    <rect x="344" y="220" width="66" height="172" rx="24" fill="#8BA790"/>
+    <path d="M154 414H400" stroke="#D3CCBA" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="486" y="94" width="240" height="310" rx="24" fill="#FCFBF7"/>
+    <path d="M552 173C552 137 581 112 606 112C631 112 660 137 660 173V260C660 302 638 331 606 331C574 331 552 302 552 260V173Z" fill="#16251F"/>
+    <path d="M569 175C569 150 588 132 606 132C624 132 643 150 643 175V256C643 288 629 312 606 312C583 312 569 288 569 256V175Z" fill="#F1EFE5"/>
+    <path d="M562 180H650" stroke="#D7B468" stroke-width="10" stroke-linecap="round"/>
+    <path d="M532 365H680" stroke="#D3CCBA" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="782" y="132" width="272" height="250" rx="22" fill="#FCFBF7"/>
+    <rect x="820" y="176" width="196" height="28" rx="14" fill="#294C3A"/>
+    <rect x="820" y="224" width="88" height="100" rx="16" fill="#D7B468"/>
+    <rect x="928" y="224" width="88" height="100" rx="16" fill="#E7E0CE"/>
+    <circle cx="864" cy="274" r="18" fill="#FCFBF7"/>
+    <circle cx="972" cy="274" r="18" fill="#294C3A"/>
+  </g>
+  <path d="M96 72H1072" stroke="#D7B468" stroke-width="3" stroke-dasharray="12 18"/>
+  <defs>
+    <filter id="shadow" x="80" y="60" width="1010" height="430" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#1B2A22" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+</svg>
