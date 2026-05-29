@@ -17,7 +17,7 @@ export function CoreLoopSection() {
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         <SectionHeading
           title="核心玩法闭环"
-          subtitle="购买装备获得积分，积分兑换体验，体验产生内容和社交，内容再推动复购与转介绍。"
+          subtitle="购买装备获得Coins，Coins兑换体验，体验产生内容和社交，内容再推动复购与转介绍。"
           light
           align="center"
         />

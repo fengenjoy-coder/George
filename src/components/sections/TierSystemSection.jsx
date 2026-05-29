@@ -59,7 +59,7 @@ export function TierSystemSection() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <SectionHeading
           title="会员等级不是折扣梯度，而是球友身份路径"
-          subtitle="成长值决定等级，积分用于兑换。这样用户消费积分后不会掉级，等级体验也更稳定。"
+          subtitle="成长值决定等级，Coins用于兑换。这样用户消费Coins后不会掉级，等级体验也更稳定。"
         />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6">

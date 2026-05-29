@@ -7,7 +7,7 @@ export const events = [
     location: '上海·佘山国际高尔夫俱乐部',
     cost: '2,000-5,000 Coins',
     image: '',
-    desc: 'Malbon 自主 Tournaments，会员积分兑换外卡参赛资格。赛后排名奖励，优胜者晋级年度总决赛。',
+    desc: 'Malbon 自主 Tournaments，会员Coins兑换外卡参赛资格。赛后排名奖励，优胜者晋级年度总决赛。',
     level: 'L3-L5',
   },
   {
@@ -69,7 +69,7 @@ export const events = [
 
 export const activityMatrix = {
   tournament: [
-    { name: '城市会员月例赛', desc: 'L3-L5 积分报名，赛后排名奖励' },
+    { name: '城市会员月例赛', desc: 'L3-L5 Coins报名，赛后排名奖励' },
     { name: '新手友好 Scramble 赛', desc: 'L1-L2 降低下场门槛' },
     { name: '品牌邀请赛', desc: 'L4-L5 稀缺名额，强化身份感' },
   ],

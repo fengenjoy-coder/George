@@ -21,8 +21,8 @@ export function PointsEconomySection() {
     <section id="points" className="relative py-24 md:py-32 bg-dark-secondary">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <SectionHeading
-          title="积分经济从消费驱动，扩展到行为、内容和社交驱动"
-          subtitle="参考 UA 的消费与互动积分，也吸收理想 App 的社区任务和圈层运营，把用户活跃变成可见资产。"
+          title="Coins经济从消费驱动，扩展到行为、内容和社交驱动"
+          subtitle="参考 UA 的消费与互动Coins，也吸收理想 App 的社区任务和圈层运营，把用户活跃变成可见资产。"
           light
         />
 
@@ -31,16 +31,16 @@ export function PointsEconomySection() {
           <div className={`lg:col-span-2 transition-all duration-700 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <Card padding="lg" className="h-full flex flex-col justify-between min-h-[400px] bg-gradient-to-br from-malbon-green/10 to-transparent border-malbon-green/20">
               <div>
-                <h3 className="text-lg font-semibold text-white mb-2">积分账户</h3>
+                <h3 className="text-lg font-semibold text-white mb-2">Coins账户</h3>
                 <p className="text-sm text-gray-400 leading-relaxed">
-                  积分可消耗，成长值不轻易消耗。积分越有体验价值，用户越愿意持续完成任务。
+                  Coins可消耗，成长值不轻易消耗。Coins越有体验价值，用户越愿意持续完成任务。
                 </p>
               </div>
               <div>
                 <div className="text-6xl md:text-7xl lg:text-8xl font-bold text-malbon-green-light leading-none mb-2">
                   {bigNumber}<span className="text-3xl md:text-4xl text-malbon-green">元</span>
                 </div>
-                <div className="text-lg text-gray-400">= 1 积分</div>
+                <div className="text-lg text-gray-400">= 1 Coins</div>
                 <p className="text-sm text-gray-500 mt-4">
                   消费是基础，活动参与、内容贡献和转介绍决定长期粘性。
                 </p>
@@ -51,7 +51,7 @@ export function PointsEconomySection() {
           {/* Right panel - acquisition list */}
           <div className={`lg:col-span-3 transition-all duration-700 delay-200 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <Card padding="lg" className="h-full">
-              <h3 className="text-lg font-semibold text-white mb-6">积分获取方式</h3>
+              <h3 className="text-lg font-semibold text-white mb-6">Coins获取方式</h3>
               <div className="grid sm:grid-cols-2 gap-3">
                 {pointsAcquisition.map((item, i) => (
                   <div
@@ -90,8 +90,8 @@ export function ExchangeSection() {
     <section id="exchange" className="relative py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <SectionHeading
-          title="积分消耗：只换体验，不换商品"
-          subtitle="Coins 兑换的是门票和资格，商品本身仍需购买。这维护了品牌价值，避免积分体系变成打折工具。"
+          title="Coins消耗：只换体验，不换商品"
+          subtitle="Coins 兑换的是门票和资格，商品本身仍需购买。这维护了品牌价值，避免Coins体系变成打折工具。"
         />
 
         {/* Tabs */}
