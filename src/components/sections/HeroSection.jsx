@@ -1,5 +1,6 @@
 import { useCountUp } from '../../hooks/useCountUp'
 import { Button } from '../ui/Button'
+import malbonLogo from '/images/malbon-logo-white.png'
 
 export function HeroSection() {
   const tiers = useCountUp(5, 1200)
@@ -58,7 +59,7 @@ export function HeroSection() {
 
               {/* Center logo */}
               <div className="relative aspect-square flex items-center justify-center">
-                <img src="/images/malbon-logo-white.png" alt="Malbon" className="w-40 h-auto drop-shadow-2xl" />
+                <img src={malbonLogo} alt="Malbon" className="w-40 h-auto drop-shadow-2xl" />
               </div>
 
               {/* Orbiting elements */}
