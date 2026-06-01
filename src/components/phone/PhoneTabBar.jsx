@@ -12,7 +12,7 @@ export function PhoneTabBar({ tabs, activeTab, onTabChange }) {
               activeTab === tab.id ? 'text-malbon-green' : 'text-gray-400'
             }`}
           >
-            <span className="text-xl">{tab.icon}</span>
+            {tab.icon && <span className="text-xl">{tab.icon}</span>}
             <span className="text-[10px] font-medium">{tab.label}</span>
           </button>
         ))}

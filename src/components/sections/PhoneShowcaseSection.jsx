@@ -16,10 +16,10 @@ function PhoneDemo({ initialTab }) {
   const [screenStack, setScreenStack] = useState([initialTab])
 
   const tabConfig = [
-    { id: 'home', label: '首页', icon: '🏠' },
-    { id: 'events', label: '活动', icon: '📅' },
-    { id: 'achievements', label: '成就', icon: '🏅' },
-    { id: 'profile', label: '我的', icon: '👤' },
+    { id: 'home', label: '首页' },
+    { id: 'events', label: '活动' },
+    { id: 'achievements', label: '成就' },
+    { id: 'profile', label: '我的' },
   ]
 
   const screens = {
