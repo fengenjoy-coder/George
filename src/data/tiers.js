@@ -1,7 +1,7 @@
 export const tiers = [
   {
     level: 'L1',
-    name: '新晋球友',
+    name: '练习场新秀',
     nameEn: 'Rookie',
     xp: 0,
     xpRequired: 0,
@@ -12,7 +12,7 @@ export const tiers = [
   },
   {
     level: 'L2',
-    name: '稳定下场',
+    name: '果岭冒险家',
     nameEn: 'Regular',
     xp: 1000,
     xpRequired: 1000,
@@ -23,7 +23,7 @@ export const tiers = [
   },
   {
     level: 'L3',
-    name: '进阶玩家',
+    name: '进阶单差点',
     nameEn: 'Veteran',
     xp: 5000,
     xpRequired: 5000,

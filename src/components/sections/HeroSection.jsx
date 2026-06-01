@@ -80,7 +80,7 @@ export function HeroSection() {
         {/* Signal strip */}
         <div className="mt-16 md:mt-24 grid grid-cols-1 sm:grid-cols-3 gap-4">
           {[
-            { value: tiers, suffix: '级', label: '从新晋球友到 Condor Member' },
+            { value: tiers, suffix: '级', label: '从练习场新秀到 Condor Member' },
             { value: values, suffix: '值', label: '成长值定等级，Coins兑体验' },
             { value: activities, suffix: '类', label: 'Tournaments, Courses, Social' },
           ].map((item, i) => (
