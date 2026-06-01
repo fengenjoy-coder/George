@@ -14,7 +14,7 @@ export function MBCSection() {
         'MBC2026 特别版挖起杆杆头 x3',
         'Malbon x IceMonster 联名变色户外眼镜 x1',
         'MBC 限量地毯 x1',
-        'MBC 金属马克杯 x12',
+        'MBC 金属马克 x12',
         'MBC 高尔夫高定服装 x2 套',
         'MBC Tournament 限定版服装 x12 件+',
         'MBC 高尔夫球包 x1',
