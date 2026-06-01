@@ -16,14 +16,14 @@ export const coreLoop = [
 ];
 
 export const modules = [
-  { icon: '等', title: 'Home', desc: '等级、成长值、Coins余额、待完成任务。' },
-  { icon: '兑', title: 'Points Store', desc: '商品券、服务券、活动名额和稀缺体验。' },
-  { icon: '赛', title: 'Events Center', desc: 'MBC Tournaments、课程、交流局、试穿会一站式报名。' },
-  { icon: '圈', title: 'Community', desc: '穿搭晒单、球场打卡、活动照片和话题任务。' },
-  { icon: '衣', title: 'My Closet', desc: '已购商品、尺码档案、搭配建议和复购提醒。' },
-  { icon: '场', title: 'Course Profile', desc: '常去球场、差点水平、打球频率和偏好标签。' },
-  { icon: '章', title: 'Badges', desc: '首次下场、月例赛、穿搭官、城市玩家。' },
-  { icon: '顾', title: 'Concierge', desc: '到店预约、尺码建议、活动邀约和高阶服务。' },
+  { icon: '', title: 'Home', desc: '等级、成长值、Coins余额、待完成任务。' },
+  { icon: '', title: 'Points Store', desc: '商品券、服务券、活动名额和稀缺体验。' },
+  { icon: '', title: 'Events Center', desc: 'MBC Tournaments、课程、交流局、试穿会一站式报名。' },
+  { icon: '', title: 'Community', desc: '穿搭晒单、球场打卡、活动照片和话题任务。' },
+  { icon: '', title: 'My Closet', desc: '已购商品、尺码档案、搭配建议和复购提醒。' },
+  { icon: '', title: 'Course Profile', desc: '常去球场、差点水平、打球频率和偏好标签。' },
+  { icon: '', title: 'Badges', desc: '首次下场、月例赛、穿搭官、城市玩家。' },
+  { icon: '', title: 'Concierge', desc: '到店预约、尺码建议、活动邀约和高阶服务。' },
 ];
 
 export const rules = [

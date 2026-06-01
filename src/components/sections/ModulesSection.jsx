@@ -22,9 +22,6 @@ export function ModulesSection() {
               }`}
               style={{ transitionDelay: `${i * 80}ms` }}
             >
-              <div className="w-10 h-10 rounded-xl bg-malbon-green/10 border border-malbon-green/20 flex items-center justify-center text-malbon-green-light font-bold text-lg mb-4 group-hover:bg-malbon-green/20 transition-colors">
-                {mod.icon}
-              </div>
               <h3 className="text-lg font-bold text-white mb-2">{mod.title}</h3>
               <p className="text-sm text-gray-400 leading-relaxed">{mod.desc}</p>
             </div>
