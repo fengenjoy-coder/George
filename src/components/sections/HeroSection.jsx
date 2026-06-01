@@ -27,11 +27,9 @@ export function HeroSection() {
               <span className="text-malbon-green-light text-sm font-medium">Malbon Golf 会员增长方案</span>
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight leading-[1.1]">
-              <span className="text-white">Play More,</span>
-              <br />
-              <span className="text-malbon-gold">
-                Live Better
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
+              <span className="text-malbon-green-light">
+                green is the common ground
               </span>
             </h1>
 
