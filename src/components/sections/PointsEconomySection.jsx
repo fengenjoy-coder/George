@@ -33,7 +33,7 @@ export function PointsEconomySection() {
               <div>
                 <h3 className="text-lg font-semibold text-white mb-2">Bucket Coins账户</h3>
                 <p className="text-sm text-gray-400 leading-relaxed">
-                  Bucket Coins可消耗，成长值不轻易消耗。Bucket Coins越有体验价值，用户越愿意持续完成任务。
+                  Bucket Coins可消耗，成长值不轻易消耗。每年自然年 L1-L3 等级清零需重新积累；L4/L5 需续费维持。
                 </p>
               </div>
               <div>

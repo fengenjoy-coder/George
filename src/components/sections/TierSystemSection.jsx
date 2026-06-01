@@ -45,6 +45,17 @@ function TierCard({ tier, index }) {
         <ProgressBar value={tier.progress} color={index >= 3 ? 'gold' : 'gradient'} size="sm" />
       </div>
 
+      {/* Annual reset label */}
+      {tier.annualReset && (
+        <div className={`mt-4 px-3 py-1.5 rounded-lg text-xs font-semibold text-center ${
+          tier.annualReset.type === 'free'
+            ? 'bg-malbon-clay/10 text-malbon-clay border border-malbon-clay/20'
+            : 'bg-malbon-gold/10 text-malbon-gold border border-malbon-gold/20'
+        }`}>
+          {tier.annualReset.label}
+        </div>
+      )}
+
       {/* Glow effect for high tiers */}
       {index >= 3 && (
         <div className="absolute inset-0 rounded-2xl bg-malbon-gold/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
@@ -59,7 +70,7 @@ export function TierSystemSection() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <SectionHeading
           title="会员等级不是折扣梯度，而是球友身份路径"
-          subtitle="成长值决定等级，Bucket Coins用于兑换。这样用户消费Bucket Coins后不会掉级，等级体验也更稳定。"
+          subtitle="成长值决定等级，Bucket Coins用于兑换。每年自然年进行等级复盘，L1-L3等级清零需重新积累，L4/L5需续费维持。"
         />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6">

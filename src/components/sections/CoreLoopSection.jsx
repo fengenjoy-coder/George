@@ -1,4 +1,5 @@
 import { coreLoop } from '../../data/navigation'
+const coreLoopSubtitle = "购买装备获得Bucket Coins，Bucket Coins兑换体验，体验产生内容和社交，内容再推动复购与转介绍。每年自然年进行等级评估，持续活跃才能保住权益。"
 import { SectionHeading } from '../ui/SectionHeading'
 import { useInView } from '../../hooks/useInView'
 
@@ -17,7 +18,7 @@ export function CoreLoopSection() {
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         <SectionHeading
           title="核心玩法闭环"
-          subtitle="购买装备获得Bucket Coins，Bucket Coins兑换体验，体验产生内容和社交，内容再推动复购与转介绍。"
+          subtitle={coreLoopSubtitle}
           light
           align="center"
         />

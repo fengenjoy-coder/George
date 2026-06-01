@@ -9,6 +9,12 @@ export const tiers = [
     benefits: ['基础Bucket Coins累积', '活动报名资格', '新手任务引导'],
     color: '#6B7280',
     progress: 12,
+    annualReset: {
+      type: 'free',
+      label: '年度清零',
+      rule: '每年自然年成长值清零，等级回到 L1',
+      detail: 'Bucket Coins 余额保留，历史最高等级作为荣誉记录',
+    },
   },
   {
     level: 'L2',
@@ -20,6 +26,12 @@ export const tiers = [
     benefits: ['Bucket Coins 1.2x 倍率', '生日专属礼遇', '练习场体验券', '基础课程优先'],
     color: '#2D5A3D',
     progress: 32,
+    annualReset: {
+      type: 'free',
+      label: '年度清零',
+      rule: '每年自然年成长值清零，等级回到 L1',
+      detail: 'Bucket Coins 余额保留，需重新积累成长值升级',
+    },
   },
   {
     level: 'L3',
@@ -31,6 +43,12 @@ export const tiers = [
     benefits: ['Bucket Coins 1.5x 倍率', '季度会员礼盒', '限量联名抽签', '专属客服通道'],
     color: '#34D399',
     progress: 54,
+    annualReset: {
+      type: 'free',
+      label: '年度清零',
+      rule: '每年自然年成长值清零，等级回到 L1',
+      detail: 'Bucket Coins 余额保留，需重新积累成长值升级',
+    },
   },
   {
     level: 'L4',
@@ -48,6 +66,12 @@ export const tiers = [
     ],
     color: '#D4AF37',
     progress: 76,
+    annualReset: {
+      type: 'paid',
+      label: '年费续费',
+      rule: '年费 30,000 RMB，每年到期需续费',
+      detail: '续费后等级保留，权益延续；不续费则降级',
+    },
   },
   {
     level: 'L5',
@@ -66,5 +90,11 @@ export const tiers = [
     ],
     color: '#F0D878',
     progress: 100,
+    annualReset: {
+      type: 'paid',
+      label: '年度评估',
+      rule: '每年维持消费活跃度评估',
+      detail: '入会费全额抵扣，需持续消费维持 Condor 身份',
+    },
   },
 ];
