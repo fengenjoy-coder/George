@@ -9,7 +9,7 @@ export function ProfileScreen() {
   const stats = [
     { label: '下场次数', value: rounds, suffix: '轮' },
     { label: '参加活动', value: eventsJoined, suffix: '场' },
-    { label: '累计Coins', value: coins, suffix: '' },
+    { label: '累计Bucket Coins', value: coins, suffix: '' },
     { label: '粉丝', value: followers, suffix: '' },
   ]
 

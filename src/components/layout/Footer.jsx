@@ -5,12 +5,11 @@ export function Footer() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <span className="text-white font-bold text-xl tracking-tight">MALBON</span>
-              <span className="text-malbon-green-light font-bold text-xl tracking-tight">CLUB</span>
+              <img src="/images/malbon-logo-white.png" alt="Malbon" className="h-10 w-auto" />
             </div>
             <p className="text-gray-400 text-lg leading-relaxed max-w-lg">
               最终目标：让用户买衣服，也进入一个更好的球友关系网络。
-              购买装备获得Coins，Coins兑换体验，体验产生内容和社交，内容再推动复购与转介绍。
+              购买装备获得Bucket Coins，Bucket Coins兑换体验，体验产生内容和社交，内容再推动复购与转介绍。
             </p>
           </div>
           <div className="flex md:justify-end">

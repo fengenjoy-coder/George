@@ -67,7 +67,7 @@ export function PhoneShowcaseSection() {
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         <SectionHeading
           title="MALBON CLUB App 交互预览"
-          subtitle="手机端是会员体验的核心入口，等级、Coins、活动、社交一站式触达。"
+          subtitle="手机端是会员体验的核心入口，等级、Bucket Coins、活动、社交一站式触达。"
           light
           align="center"
         />

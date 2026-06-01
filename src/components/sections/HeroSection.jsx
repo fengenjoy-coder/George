@@ -29,12 +29,12 @@ export function HeroSection() {
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
               <span className="text-malbon-green-light">
-                green is the common ground
+                GREEN IS THE COMMON GROUND
               </span>
             </h1>
 
             <p className="text-lg md:text-xl text-gray-400 max-w-xl leading-relaxed">
-              以等级升级、Coins获取、体验置换为核心玩法，让会员在品牌里完成购买、打球、学习、社交、内容分享和复购。
+              以等级升级、Bucket Coins获取、体验置换为核心玩法，让会员在品牌里完成购买、打球、学习、社交、内容分享和复购。
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -42,7 +42,7 @@ export function HeroSection() {
                 查看玩法框架
               </Button>
               <Button variant="secondary" size="lg" href="#exchange">
-                Coins可兑换什么
+                Bucket Coins可兑换什么
               </Button>
             </div>
           </div>
@@ -58,9 +58,7 @@ export function HeroSection() {
 
               {/* Center logo */}
               <div className="relative aspect-square flex items-center justify-center">
-                <div className="w-32 h-32 rounded-full border-2 border-malbon-green/30 flex items-center justify-center bg-gradient-to-br from-malbon-green/20 to-malbon-sand/10">
-                  <span className="text-white font-bold text-2xl tracking-tight">M</span>
-                </div>
+                <img src="/images/malbon-logo-white.png" alt="Malbon" className="w-40 h-auto drop-shadow-2xl" />
               </div>
 
               {/* Orbiting elements */}
@@ -81,7 +79,7 @@ export function HeroSection() {
         <div className="mt-16 md:mt-24 grid grid-cols-1 sm:grid-cols-3 gap-4">
           {[
             { value: tiers, suffix: '级', label: '从练习场新秀到 Condor Member' },
-            { value: values, suffix: '值', label: '成长值定等级，Coins兑体验' },
+            { value: values, suffix: '值', label: '成长值定等级，Bucket Coins兑体验' },
             { value: activities, suffix: '类', label: 'Tournaments, Courses, Social' },
           ].map((item, i) => (
             <div key={i} className="bg-dark-card/50 backdrop-blur-sm border border-white/5 rounded-2xl p-6">

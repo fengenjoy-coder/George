@@ -30,7 +30,7 @@ export function MBCSection() {
         '每年 12+ 站会员专属邀约制 Tournaments',
         '每位会员可选择 3 场赛事活动免费参加',
         'MBC Tournaments Rankings（Players vs Players / Players vs Courses）',
-        '单场Coins排名与成就系统统计',
+        '单场Bucket Coins排名与成就系统统计',
         'Malbon Village 现场互动与赞助商权益',
       ],
     },
@@ -41,7 +41,7 @@ export function MBCSection() {
       items: [
         '专属 Pro-shop 产品清单与限量联名产品',
         '全部 Malbon 产品优先购买资格',
-        '购买折扣和更多Coins（通过参加 MBC 活动获取）',
+        '购买折扣和更多Bucket Coins（通过参加 MBC 活动获取）',
         '参与 Malbon 产品设计创作，打造专属 Buckets 产品',
       ],
     },
@@ -66,7 +66,7 @@ export function MBCSection() {
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         <SectionHeading
-          title="MBC 付费会员：从Coins会员到品牌共创者"
+          title="MBC 付费会员：从Bucket Coins会员到品牌共创者"
           subtitle="Malbon Buckets Club 年费会员，享受四大核心权益，进入更专业的高尔夫生活圈层。"
           light
         />

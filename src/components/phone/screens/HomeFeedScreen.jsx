@@ -6,9 +6,9 @@ export function HomeFeedScreen() {
   const xpCount = useCountUp(6520, 800)
 
   const dailyTasks = [
-    { name: '每日签到', reward: '+5 Coins', done: true },
-    { name: '球场打卡', reward: '+100 Coins', done: false },
-    { name: '发布穿搭笔记', reward: '+50 Coins', done: false },
+    { name: '每日签到', reward: '+5 Bucket Coins', done: true },
+    { name: '球场打卡', reward: '+100 Bucket Coins', done: false },
+    { name: '发布穿搭笔记', reward: '+50 Bucket Coins', done: false },
   ]
 
   return (

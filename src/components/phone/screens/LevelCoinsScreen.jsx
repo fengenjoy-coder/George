@@ -15,11 +15,11 @@ export function LevelCoinsScreen() {
 
   return (
     <div className="px-5 pt-2 pb-4 space-y-5">
-      {/* Coins header */}
+      {/* Bucket Coins header */}
       <div className="text-center py-4">
         <div className="text-xs text-gray-500 mb-1">MALBON COINS</div>
         <div className="text-4xl font-bold text-black tracking-tight">{coinBalance.toLocaleString()}</div>
-        <div className="text-xs text-gray-400 mt-1">累计获得 {totalEarned.toLocaleString()} Coins</div>
+        <div className="text-xs text-gray-400 mt-1">累计获得 {totalEarned.toLocaleString()} Bucket Coins</div>
       </div>
 
       {/* Current tier card */}
