@@ -29,8 +29,12 @@ export function HeroSection() {
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
+              <span className="text-malbon-green-light" style={{ fontFamily: "'StyreneA-Regular', 'Inter', sans-serif" }}>
+                GREEN IS THE
+              </span>
+              <br />
               <span className="text-malbon-green-light">
-                GREEN IS THE COMMON GROUND
+                COMMON GROUND
               </span>
             </h1>
 
