@@ -67,7 +67,7 @@ export function MBCSection() {
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         <SectionHeading
           title="MBC 付费会员：从Bucket Coins会员到品牌共创者"
-          subtitle="Malbon Buckets Club 年费会员，享受四大核心权益，进入更专业的高尔夫生活圈层。"
+          subtitle="付费直通"
           light
         />
 

@@ -22,7 +22,7 @@ export function PointsEconomySection() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <SectionHeading
           title="Bucket Coins经济从消费驱动，扩展到行为、内容和社交驱动"
-          subtitle="参考 UA 的消费与互动Bucket Coins，也吸收理想 App 的社区任务和圈层运营，把用户活跃变成可见资产。"
+          subtitle="bucket coins经济体"
           light
         />
 

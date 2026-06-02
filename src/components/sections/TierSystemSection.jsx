@@ -70,7 +70,7 @@ export function TierSystemSection() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <SectionHeading
           title="两条路径，五种身份"
-          subtitle="普通玩家通过消费和行为逐步升级，人民币玩家一步到位交钱享受权益。每年自然年复盘，持续活跃才能保住身份。"
+          subtitle="免费加入"
         />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6">
