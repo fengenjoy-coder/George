@@ -44,10 +44,10 @@ export function HeroSection() {
 
             <div className="flex flex-wrap gap-4">
               <Button variant="primary" size="lg" href="#tiers">
-                查看玩法框架
+                免费加入
               </Button>
-              <Button variant="secondary" size="lg" href="#exchange">
-                Bucket Coins可兑换什么
+              <Button variant="secondary" size="lg" href="#mbc">
+                付费直通
               </Button>
             </div>
           </div>

@@ -11,6 +11,7 @@ import { CoreLoopSection } from './components/sections/CoreLoopSection'
 import { MetricsRoadmapSection } from './components/sections/MetricsRoadmapSection'
 import { RulesSection } from './components/sections/RulesSection'
 import { AnnualResetSection } from './components/sections/AnnualResetSection'
+import { MemberPathSection } from './components/sections/MemberPathSection'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <main>
         <HeroSection />
         <TierSystemSection />
+        <MemberPathSection />
         <MBCSection />
         <PointsEconomySection />
         <ExchangeSection />

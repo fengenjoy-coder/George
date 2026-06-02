@@ -69,8 +69,8 @@ export function TierSystemSection() {
     <section id="tiers" className="relative py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <SectionHeading
-          title="会员等级不是折扣梯度，而是球友身份路径"
-          subtitle="成长值决定等级，Bucket Coins用于兑换。每年自然年进行等级复盘，L1-L3等级清零需重新积累，L4/L5需续费维持。"
+          title="两条路径，五种身份"
+          subtitle="普通玩家通过消费和行为逐步升级，人民币玩家一步到位交钱享受权益。每年自然年复盘，持续活跃才能保住身份。"
         />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6">
