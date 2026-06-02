@@ -68,6 +68,7 @@ export function MBCSection() {
         <SectionHeading
           title="MBC 付费会员：从Bucket Coins会员到品牌共创者"
           subtitle="付费直通"
+          tagline="氪金玩家mode"
           light
         />
 

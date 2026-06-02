@@ -1,6 +1,6 @@
 import { useInView } from '../../hooks/useInView'
 
-export function SectionHeading({ title, subtitle, align = 'left', light = false }) {
+export function SectionHeading({ title, subtitle, tagline, align = 'left', light = false }) {
   const [ref, isInView] = useInView()
 
   return (
@@ -20,6 +20,13 @@ export function SectionHeading({ title, subtitle, align = 'left', light = false 
           align === 'center' ? 'mx-auto' : ''
         } ${light ? 'text-white/70' : 'text-gray-400'}`}>
           {subtitle}
+        </p>
+      )}
+      {tagline && (
+        <p className={`mt-2 text-sm md:text-base max-w-2xl ${
+          align === 'center' ? 'mx-auto' : ''
+        } ${light ? 'text-malbon-green-light/80' : 'text-malbon-green-light'}`}>
+          {tagline}
         </p>
       )}
     </div>

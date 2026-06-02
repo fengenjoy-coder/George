@@ -71,6 +71,7 @@ export function TierSystemSection() {
         <SectionHeading
           title="两条路径，五种身份"
           subtitle="免费加入"
+          tagline="升级打怪mode"
         />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6">
