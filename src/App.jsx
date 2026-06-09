@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import { Navbar } from './components/layout/Navbar'
 import { Footer } from './components/layout/Footer'
 import { HeroSection } from './components/sections/HeroSection'
@@ -12,8 +13,32 @@ import { MetricsRoadmapSection } from './components/sections/MetricsRoadmapSecti
 import { RulesSection } from './components/sections/RulesSection'
 import { AnnualResetSection } from './components/sections/AnnualResetSection'
 import { MemberPathSection } from './components/sections/MemberPathSection'
+import { AdminProvider } from './admin/AdminContext'
+import { AdminDashboard } from './admin/AdminDashboard'
 
 function App() {
+  const [isAdmin, setIsAdmin] = useState(false)
+
+  useEffect(() => {
+    const checkAdmin = () => {
+      setIsAdmin(window.location.hash === '#admin')
+    }
+    checkAdmin()
+    window.addEventListener('hashchange', checkAdmin)
+    return () => window.removeEventListener('hashchange', checkAdmin)
+  }, [])
+
+  if (isAdmin) {
+    return (
+      <AdminProvider>
+        <AdminDashboard onExit={() => {
+          setIsAdmin(false)
+          window.location.hash = ''
+        }} />
+      </AdminProvider>
+    )
+  }
+
   return (
     <div className="min-h-screen bg-dark-primary">
       <Navbar />
