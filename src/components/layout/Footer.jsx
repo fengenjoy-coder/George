@@ -11,7 +11,7 @@ export function Footer() {
             </div>
             <p className="text-gray-400 text-lg leading-relaxed max-w-lg">
               最终目标：让用户买衣服，也进入一个更好的球友关系网络。
-              购买装备获得Bucket Coins，Bucket Coins兑换体验，体验产生内容和社交，内容再推动复购与转介绍。
+              购买装备获得Points，Points兑换体验，体验产生内容和社交，内容再推动复购与转介绍。
             </p>
           </div>
           <div className="flex md:justify-end">

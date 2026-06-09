@@ -3,7 +3,7 @@ import { IPhoneFrame } from '../phone/IPhoneFrame'
 import { PhoneStatusBar } from '../phone/PhoneStatusBar'
 import { PhoneTabBar } from '../phone/PhoneTabBar'
 import { HomeFeedScreen } from '../phone/screens/HomeFeedScreen'
-import { LevelCoinsScreen } from '../phone/screens/LevelCoinsScreen'
+import { WalletScreen } from '../phone/screens/WalletScreen'
 import { EventsListScreen } from '../phone/screens/EventsListScreen'
 import { ProfileScreen } from '../phone/screens/ProfileScreen'
 import { AchievementsScreen } from '../phone/screens/AchievementsScreen'
@@ -67,7 +67,7 @@ export function PhoneShowcaseSection() {
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         <SectionHeading
           title="MALBON CLUB App 交互预览"
-          subtitle="手机端是会员体验的核心入口，等级、Bucket Coins、活动、社交一站式触达。"
+          subtitle="手机端是会员体验的核心入口，等级、Points、活动、社交一站式触达。"
           light
           align="center"
         />

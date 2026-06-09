@@ -34,7 +34,7 @@ export function EventDetailScreen() {
             <div className="text-sm font-semibold text-black">{evt.level}</div>
           </div>
           <div className="bg-gray-50 rounded-xl p-3">
-            <div className="text-[10px] text-gray-400 mb-1">消耗Bucket Coins</div>
+            <div className="text-[10px] text-gray-400 mb-1">消耗Points</div>
             <div className="text-sm font-semibold text-malbon-gold">{evt.cost}</div>
           </div>
         </div>
@@ -52,7 +52,7 @@ export function EventDetailScreen() {
 
         {/* CTA */}
         <button className="w-full py-4 bg-malbon-green text-white font-bold rounded-xl active:scale-[0.97] transition-transform shadow-lg shadow-malbon-green/20">
-          使用Bucket Coins报名
+          使用Points报名
         </button>
       </div>
     </div>

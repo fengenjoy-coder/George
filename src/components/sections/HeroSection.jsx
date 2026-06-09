@@ -39,7 +39,7 @@ export function HeroSection() {
             </h1>
 
             <p className="text-lg md:text-xl text-gray-400 max-w-xl leading-relaxed">
-              以等级升级、Bucket Coins获取、体验置换为核心玩法，让会员在品牌里完成购买、打球、学习、社交、内容分享和复购。
+              以等级升级、Points获取、体验置换为核心玩法，让会员在品牌里完成购买、打球、学习、社交、内容分享和复购。
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -84,7 +84,7 @@ export function HeroSection() {
         <div className="mt-16 md:mt-24 grid grid-cols-1 sm:grid-cols-3 gap-4">
           {[
             { value: tiers, suffix: '级', label: '从练习场新秀到 Condor Member' },
-            { value: values, suffix: '值', label: '成长值定等级，Bucket Coins兑体验' },
+            { value: values, suffix: '轨', label: 'Credits定等级，Points兑体验' },
             { value: activities, suffix: '类', label: 'Tournaments, Courses, Social' },
           ].map((item, i) => (
             <div key={i} className="bg-dark-card/50 backdrop-blur-sm border border-white/5 rounded-2xl p-6">

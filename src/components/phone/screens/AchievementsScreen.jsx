@@ -28,6 +28,10 @@ export function AchievementsScreen() {
           >
             <div className={`text-3xl mb-2 ${ach.unlocked ? '' : 'grayscale'}`}>{ach.icon}</div>
             <div className="text-[11px] font-semibold text-black text-center leading-tight">{ach.name}</div>
+            <div className="mt-1.5 flex items-center gap-1 text-[9px]">
+              <span className="text-malbon-green">+{ach.pointsReward}P</span>
+              <span className="text-malbon-gold">+{ach.creditsReward}C</span>
+            </div>
             {!ach.unlocked && (
               <div className="mt-2 w-full">
                 <div className="w-full h-1 bg-gray-200 rounded-full overflow-hidden">

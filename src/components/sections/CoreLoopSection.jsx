@@ -1,5 +1,5 @@
 import { coreLoop } from '../../data/navigation'
-const coreLoopSubtitle = "购买装备获得Bucket Coins，Bucket Coins兑换体验，体验产生内容和社交，内容再推动复购与转介绍。每年自然年进行等级评估，持续活跃才能保住权益。"
+const coreLoopSubtitle = "购买装备获得 Points，Points 兑换体验，体验产生内容和社交，内容再推动复购与转介绍。每年自然年进行等级评估，持续活跃才能保住权益。"
 import { SectionHeading } from '../ui/SectionHeading'
 import { useInView } from '../../hooks/useInView'
 

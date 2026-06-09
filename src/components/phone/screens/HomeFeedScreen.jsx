@@ -6,9 +6,9 @@ export function HomeFeedScreen() {
   const xpCount = useCountUp(6520, 800)
 
   const dailyTasks = [
-    { name: '每日签到', reward: '+5 Bucket Coins', done: true },
-    { name: '球场打卡', reward: '+100 Bucket Coins', done: false },
-    { name: '发布穿搭笔记', reward: '+50 Bucket Coins', done: false },
+    { name: '每日签到', reward: '+5 Points', done: true },
+    { name: '球场打卡', reward: '+100 Points', done: false },
+    { name: '发布穿搭笔记', reward: '+50 Points', done: false },
   ]
 
   return (
@@ -34,7 +34,7 @@ export function HomeFeedScreen() {
       <div className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
         <div className="flex items-center justify-between mb-3">
           <div className="text-sm font-bold text-black">成长进度</div>
-          <div className="text-xs text-gray-500">{xpCount.toLocaleString()} / 15,000 XP</div>
+          <div className="text-xs text-gray-500">{xpCount.toLocaleString()} / 20,000 Credits</div>
         </div>
         <div className="w-full h-2 bg-gray-100 rounded-full overflow-hidden mb-2">
           <div className="h-full bg-gradient-to-r from-malbon-green to-malbon-gold rounded-full" style={{ width: '43%' }} />

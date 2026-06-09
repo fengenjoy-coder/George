@@ -5,14 +5,15 @@ export function AnnualResetSection() {
   const [ref, isInView] = useInView()
 
   const freeTiers = [
-    'Bucket Coins 余额保留',
-    '成长值清零，等级回到 L1',
-    '需重新积累成长值升级',
+    'Points 余额保留',
+    'Credits 清零，等级回到 L1',
+    '需重新积累 Credits 升级',
     '历史最高等级作为荣誉记录',
   ]
 
   const paidTiers = [
-    'L4 MBC Member：年费 30,000 RMB，每年到期需续费',
+    'L4 MBC Member：年费 ¥30,000，每年到期需续费',
+    'L4 MBC Member：全年 Credits ≥ 60,000 可免次年年费',
     'L5 Condor Member：每年维持消费活跃度评估',
     '续费/达标后等级保留，权益延续',
     '不续费/不达标则降级，失去专属权益',

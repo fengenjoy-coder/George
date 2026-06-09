@@ -22,7 +22,14 @@ function TierCard({ tier, index }) {
       </div>
 
       <h3 className="text-xl font-bold text-white mb-2">{tier.name}</h3>
-      <p className="text-sm text-gray-400 mb-6 leading-relaxed min-h-[3rem]">{tier.description}</p>
+      <p className="text-sm text-gray-400 mb-4 leading-relaxed">{tier.description}</p>
+
+      {/* Points multiplier */}
+      <div className="flex items-center gap-2 mb-4">
+        <Badge variant={index >= 3 ? 'gold' : 'green'} size="sm">
+          Points {tier.pointsMultiplier}x
+        </Badge>
+      </div>
 
       {/* Benefits */}
       <div className="space-y-2 mb-6">
@@ -36,14 +43,32 @@ function TierCard({ tier, index }) {
         ))}
       </div>
 
-      {/* Progress */}
+      {/* Credits Progress */}
       <div className="mt-auto">
         <div className="flex justify-between text-xs text-gray-500 mb-2">
-          <span>成长值</span>
-          <span>{tier.xp.toLocaleString()}</span>
+          <span>Credits</span>
+          <span>{tier.credits.toLocaleString()}</span>
         </div>
         <ProgressBar value={tier.progress} color={index >= 3 ? 'gold' : 'gradient'} size="sm" />
       </div>
+
+      {/* L4 Entry Paths */}
+      {tier.entryPaths && (
+        <div className="mt-4 space-y-2">
+          <div className="text-xs text-gray-500 font-semibold mb-2">三种进入方式：</div>
+          {tier.entryPaths.map((path, i) => (
+            <div key={i} className="flex items-start gap-2 text-xs">
+              <span className="w-4 h-4 rounded-full bg-malbon-gold/20 text-malbon-gold flex items-center justify-center flex-shrink-0 text-[10px] font-bold">
+                {i + 1}
+              </span>
+              <div>
+                <span className="text-malbon-gold font-semibold">{path.name}：</span>
+                <span className="text-gray-400">{path.desc}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
 
       {/* Annual reset label */}
       {tier.annualReset && (
@@ -53,6 +78,18 @@ function TierCard({ tier, index }) {
             : 'bg-malbon-gold/10 text-malbon-gold border border-malbon-gold/20'
         }`}>
           {tier.annualReset.label}
+        </div>
+      )}
+
+      {/* Renewal discount for L4 */}
+      {tier.renewalDiscount && (
+        <div className="mt-3 space-y-1">
+          <div className="text-xs text-gray-500">续费积分优惠：</div>
+          {tier.renewalDiscount.map((d, i) => (
+            <div key={i} className="text-[10px] text-gray-400">
+              {d.years}年：{d.discount} ¥{d.price.toLocaleString()} + 返 {d.returnPoints.toLocaleString()} Points
+            </div>
+          ))}
         </div>
       )}
 
@@ -71,7 +108,7 @@ export function TierSystemSection() {
         <SectionHeading
           title="两条路径，五种身份"
           subtitle="免费加入"
-          tagline="升级打怪mode"
+          tagline="升级打怪 mode"
         />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6">
