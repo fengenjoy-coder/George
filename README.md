@@ -4,7 +4,7 @@ Malbon Golf 会员增长与 CRM 策略展示页面。
 
 ## 在线预览
 
-https://fengenjoy-coder.github.io/George/
+**[https://fengenjoy-coder.github.io/George/](https://fengenjoy-coder.github.io/George/)**
 
 ## 项目简介
 
