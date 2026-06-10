@@ -4,12 +4,14 @@ import { LoginModal } from './LoginModal'
 import { PlanningPanel } from './PlanningPanel'
 import { BacktestPanel } from './BacktestPanel'
 import { LiveMonitorPanel } from './LiveMonitorPanel'
+import { MemberPanel } from './member/MemberPanel'
 import { useAdminConfig } from './hooks/useAdminConfig'
 
 const TABS = [
   { id: 'planning', label: '策划', icon: 'P' },
   { id: 'backtest', label: '回测', icon: 'B' },
   { id: 'monitor', label: '实时监控', icon: 'M' },
+  { id: 'members', label: '会员管理', icon: 'U' },
 ]
 
 export function AdminDashboard({ onExit }) {
@@ -23,6 +25,7 @@ export function AdminDashboard({ onExit }) {
       case 'planning': return <PlanningPanel config={config} />
       case 'backtest': return <BacktestPanel config={config} />
       case 'monitor': return <LiveMonitorPanel config={config} />
+      case 'members': return <MemberPanel />
       default: return null
     }
   }
