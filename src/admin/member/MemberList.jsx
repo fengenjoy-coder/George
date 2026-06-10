@@ -44,6 +44,19 @@ export function MemberList({
 
   const statusLabels = { active: '活跃', dormant: '沉睡', churned: '流失' }
 
+  const tagColors = {
+    '穿搭达人': 'bg-green-500/10 text-green-400 border-green-500/20',
+    '周末球友': 'bg-malbon-green/10 text-malbon-green-light border-malbon-green/20',
+    '装备控': 'bg-malbon-gold/10 text-malbon-gold border-malbon-gold/20',
+    '社交蝴蝶': 'bg-malbon-clay/10 text-malbon-clay border-malbon-clay/20',
+    '技术流': 'bg-blue-500/10 text-blue-400 border-blue-500/20',
+    '颜值党': 'bg-pink-500/10 text-pink-400 border-pink-500/20',
+    '新手入门': 'bg-gray-500/10 text-gray-400 border-gray-500/20',
+    '铁杆粉丝': 'bg-yellow-500/10 text-yellow-400 border-yellow-500/20',
+    '高消费': 'bg-red-500/10 text-red-400 border-red-500/20',
+    '内容创作者': 'bg-purple-500/10 text-purple-400 border-purple-500/20',
+  }
+
   const tierColors = {
     L1: 'bg-gray-500',
     L2: 'bg-malbon-green',
@@ -113,6 +126,7 @@ export function MemberList({
                 <th className="text-right py-3 px-4 text-xs text-gray-500 font-medium">总消费</th>
                 <th className="text-right py-3 px-4 text-xs text-gray-500 font-medium">Points</th>
                 <th className="text-right py-3 px-4 text-xs text-gray-500 font-medium">Credits</th>
+                <th className="text-left py-3 px-4 text-xs text-gray-500 font-medium">标签</th>
                 <th className="text-left py-3 px-4 text-xs text-gray-500 font-medium">最后活跃</th>
                 <th className="text-right py-3 px-4 text-xs text-gray-500 font-medium">操作</th>
               </tr>
@@ -147,6 +161,18 @@ export function MemberList({
                   </td>
                   <td className="py-3 px-4 text-right text-sm text-malbon-gold font-mono">
                     {m.creditsTotal.toLocaleString()}
+                  </td>
+                  <td className="py-3 px-4">
+                    <div className="flex flex-wrap gap-1">
+                      {(m.profile?.tags || []).slice(0, 2).map((tag) => (
+                        <span key={tag} className={`px-1.5 py-0.5 rounded text-[10px] font-medium border ${tagColors[tag] || 'bg-white/5 text-gray-400 border-white/10'}`}>
+                          {tag}
+                        </span>
+                      ))}
+                      {(m.profile?.tags || []).length > 2 && (
+                        <span className="text-[10px] text-gray-500">+{(m.profile?.tags || []).length - 2}</span>
+                      )}
+                    </div>
                   </td>
                   <td className="py-3 px-4 text-sm text-gray-500">
                     {m.lastActive}

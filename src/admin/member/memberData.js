@@ -2,8 +2,23 @@ const FIRST_NAMES = ['George', 'Jason', 'Kevin', 'Ryan', 'Alex', 'Chris', 'Mike'
 const LAST_NAMES = ['G.', 'L.', 'W.', 'C.', 'H.', 'M.', 'K.', 'Z.', 'F.', 'Y.', 'P.', 'S.', 'R.', 'T.', 'B.', 'N.', 'D.', 'J.', 'Q.', 'V.']
 const TIERS = ['L1', 'L2', 'L3', 'L4', 'L5']
 
+const REGIONS = ['上海', '北京', '深圳', '广州', '杭州', '成都']
+const FITS = ['修身', '标准', '宽松']
+const COLORS = ['绿色', '藏青', '白色', '黑色', '卡其', '酒红', '橙色', '灰色']
+const COURSES = ['林克斯球场', '公园式球场', '山地球场', '沙漠球场']
+const TAGS = ['穿搭达人', '周末球友', '装备控', '社交蝴蝶', '技术流', '颜值党', '新手入门', '铁杆粉丝']
+
 function randomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min
+}
+
+function shuffle(arr) {
+  const copy = [...arr]
+  for (let i = copy.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]]
+  }
+  return copy
 }
 
 function randomDate(start, end) {
@@ -45,6 +60,19 @@ function generateActivities() {
   return acts.sort((a, b) => new Date(b.date) - new Date(a.date))
 }
 
+function generateProfile() {
+  return {
+    photo: '',
+    height: randomInt(160, 190),
+    weight: randomInt(55, 95),
+    fitPreference: FITS[randomInt(0, 2)],
+    colorPreference: shuffle(COLORS).slice(0, randomInt(2, 4)),
+    coursePreference: COURSES[randomInt(0, 3)],
+    region: REGIONS[randomInt(0, 5)],
+    tags: shuffle(TAGS).slice(0, randomInt(2, 4)),
+  }
+}
+
 function getStatus(lastActive) {
   const days = Math.floor((Date.now() - new Date(lastActive).getTime()) / (1000 * 60 * 60 * 24))
   if (days <= 30) return 'active'
@@ -58,7 +86,6 @@ export function generateMockMembers(count = 20) {
     const last = LAST_NAMES[Math.floor(i / FIRST_NAMES.length) % LAST_NAMES.length]
     const name = `${first} ${last}`
     const tier = TIERS[randomInt(0, TIERS.length - 1)]
-    const tierIndex = TIERS.indexOf(tier)
     const totalSpend = randomInt(2000, 200000)
     const pointsBalance = randomInt(0, 80000)
     const creditsTotal = randomInt(0, 500000)
@@ -78,6 +105,7 @@ export function generateMockMembers(count = 20) {
       pointsBalance,
       creditsTotal,
       lastActive,
+      profile: generateProfile(),
       transactions: generateTransactions(),
       activities: generateActivities(),
     }

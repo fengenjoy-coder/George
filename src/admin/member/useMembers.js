@@ -3,10 +3,34 @@ import { generateMockMembers } from './memberData'
 
 const STORAGE_KEY = 'admin:members'
 
+const DEFAULT_PROFILE = {
+  photo: '',
+  height: 175,
+  weight: 70,
+  fitPreference: '标准',
+  colorPreference: [],
+  coursePreference: '',
+  region: '',
+  tags: [],
+}
+
+function migrateMember(member) {
+  if (!member.profile) {
+    return { ...member, profile: { ...DEFAULT_PROFILE } }
+  }
+  return {
+    ...member,
+    profile: { ...DEFAULT_PROFILE, ...member.profile },
+  }
+}
+
 function loadMembers() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY)
-    if (raw) return JSON.parse(raw)
+    if (raw) {
+      const parsed = JSON.parse(raw)
+      return parsed.map(migrateMember)
+    }
   } catch {
     // ignore
   }
@@ -31,7 +55,12 @@ export function useMembers() {
     let result = members
     if (searchQuery) {
       const q = searchQuery.toLowerCase()
-      result = result.filter((m) => m.name.toLowerCase().includes(q) || m.phone.includes(q))
+      result = result.filter((m) =>
+        m.name.toLowerCase().includes(q) ||
+        m.phone.includes(q) ||
+        (m.profile?.region && m.profile.region.includes(q)) ||
+        (m.profile?.tags && m.profile.tags.some((t) => t.includes(q)))
+      )
     }
     if (filterTier !== 'all') {
       result = result.filter((m) => m.tier === filterTier)
@@ -46,7 +75,12 @@ export function useMembers() {
   const paginated = filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE)
 
   const addMember = useCallback((member) => {
-    const newMember = { ...member, id: `member_${Date.now()}`, joinDate: new Date().toISOString().split('T')[0] }
+    const newMember = {
+      ...member,
+      id: `member_${Date.now()}`,
+      joinDate: new Date().toISOString().split('T')[0],
+      profile: member.profile || { ...DEFAULT_PROFILE },
+    }
     setMembers((prev) => {
       const next = [newMember, ...prev]
       saveMembers(next)
@@ -56,7 +90,14 @@ export function useMembers() {
 
   const updateMember = useCallback((id, updates) => {
     setMembers((prev) => {
-      const next = prev.map((m) => (m.id === id ? { ...m, ...updates } : m))
+      const next = prev.map((m) => {
+        if (m.id !== id) return m
+        const updated = { ...m, ...updates }
+        if (updates.profile) {
+          updated.profile = { ...m.profile, ...updates.profile }
+        }
+        return updated
+      })
       saveMembers(next)
       return next
     })
