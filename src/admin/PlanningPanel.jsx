@@ -115,7 +115,7 @@ function TierEditor({ tiers, onChange, readOnly }) {
           <div className="flex items-center gap-2">
             <span className="text-xs text-gray-500">Credits</span>
             {readOnly ? (
-              <span className="text-sm text-gray-300 font-mono w-20 text-right">{tier.credits.toLocaleString()}</span>
+              <span className="text-sm text-gray-300 font-mono w-20 text-right">{tier.credits.toLocaleString('zh-CN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
             ) : (
               <input
                 type="number"

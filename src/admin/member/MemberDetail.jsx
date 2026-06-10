@@ -114,15 +114,15 @@ export function MemberDetail({ member, onClose, onEdit, onAdjustPoints }) {
           <div className="grid grid-cols-3 gap-3">
             <div className="bg-white/[0.03] rounded-xl p-3 border border-white/[0.06]">
               <div className="text-xs text-gray-500 mb-1">Points</div>
-              <div className="text-base font-bold text-malbon-green-light">{member.pointsBalance.toLocaleString()}</div>
+              <div className="text-base font-bold text-malbon-green-light">{member.pointsBalance.toLocaleString('zh-CN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</div>
             </div>
             <div className="bg-white/[0.03] rounded-xl p-3 border border-white/[0.06]">
               <div className="text-xs text-gray-500 mb-1">Credits</div>
-              <div className="text-base font-bold text-malbon-gold">{member.creditsTotal.toLocaleString()}</div>
+              <div className="text-base font-bold text-malbon-gold">{member.creditsTotal.toLocaleString('zh-CN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</div>
             </div>
             <div className="bg-white/[0.03] rounded-xl p-3 border border-white/[0.06]">
               <div className="text-xs text-gray-500 mb-1">总消费</div>
-              <div className="text-base font-bold text-white">¥{member.totalSpend.toLocaleString()}</div>
+              <div className="text-base font-bold text-white">¥{member.totalSpend.toLocaleString('zh-CN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</div>
             </div>
           </div>
 
@@ -183,7 +183,7 @@ export function MemberDetail({ member, onClose, onEdit, onAdjustPoints }) {
                     <div className="text-xs text-gray-500">{tx.date}</div>
                   </div>
                   <span className={`text-sm font-semibold ${tx.type === 'earn' ? 'text-malbon-green-light' : 'text-red-400'}`}>
-                    {tx.type === 'earn' ? '+' : ''}{tx.amount.toLocaleString()}
+                    {tx.type === 'earn' ? '+' : ''}{tx.amount.toLocaleString('zh-CN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                   </span>
                 </div>
               ))}
@@ -204,7 +204,7 @@ export function MemberDetail({ member, onClose, onEdit, onAdjustPoints }) {
                       <div className="text-sm text-gray-300">消费</div>
                       <div className="text-xs text-gray-500">{act.date}</div>
                     </div>
-                    <span className="text-sm font-semibold text-white">¥{act.amount?.toLocaleString()}</span>
+                    <span className="text-sm font-semibold text-white">¥{act.amount?.toLocaleString('zh-CN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
                   </div>
                 ))}
               {member.activities.filter((a) => a.type === 'purchase').length === 0 && (
@@ -226,7 +226,7 @@ export function MemberDetail({ member, onClose, onEdit, onAdjustPoints }) {
                 <div className="w-2 h-2 rounded-full bg-malbon-gold mt-1.5 flex-shrink-0" />
                 <div>
                   <div className="text-sm text-gray-300">当前等级 {member.tier}</div>
-                  <div className="text-xs text-gray-500">Credits {member.creditsTotal.toLocaleString()}</div>
+                  <div className="text-xs text-gray-500">Credits {member.creditsTotal.toLocaleString('zh-CN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</div>
                 </div>
               </div>
             </div>

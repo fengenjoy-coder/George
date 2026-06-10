@@ -27,7 +27,7 @@ export function GaugeChart({ value, max, label, unit = '' }) {
         </svg>
         <div className="absolute inset-0 flex flex-col items-center justify-center">
           <span className="text-lg font-bold text-white">{value}{unit}</span>
-          <span className="text-[10px] text-gray-500">{Math.round(percentage)}%</span>
+          <span className="text-[10px] text-gray-500">{percentage.toFixed(2)}%</span>
         </div>
       </div>
       <span className="text-xs text-gray-400 mt-2 text-center">{label}</span>

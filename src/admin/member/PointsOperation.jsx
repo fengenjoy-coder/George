@@ -22,7 +22,7 @@ export function PointsOperation({ member, onConfirm, onClose }) {
         <h3 className="text-lg font-bold text-white mb-2"
         >积分调整</h3>
         <p className="text-sm text-gray-500 mb-6"
-        >{member.name} · 当前 Points: {member.pointsBalance.toLocaleString()} · Credits: {member.creditsTotal.toLocaleString()}</p>
+        >{member.name} · 当前 Points: {member.pointsBalance.toLocaleString('zh-CN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} · Credits: {member.creditsTotal.toLocaleString('zh-CN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
 
         <form onSubmit={handleSubmit} className="space-y-4"
         >

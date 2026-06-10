@@ -154,13 +154,13 @@ export function MemberList({
                     </span>
                   </td>
                   <td className="py-3 px-4 text-right text-sm text-gray-300 font-mono">
-                    ¥{m.totalSpend.toLocaleString()}
+                    ¥{m.totalSpend.toLocaleString('zh-CN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                   </td>
                   <td className="py-3 px-4 text-right text-sm text-malbon-green-light font-mono">
-                    {m.pointsBalance.toLocaleString()}
+                    {m.pointsBalance.toLocaleString('zh-CN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                   </td>
                   <td className="py-3 px-4 text-right text-sm text-malbon-gold font-mono">
-                    {m.creditsTotal.toLocaleString()}
+                    {m.creditsTotal.toLocaleString('zh-CN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                   </td>
                   <td className="py-3 px-4">
                     <div className="flex flex-wrap gap-1">

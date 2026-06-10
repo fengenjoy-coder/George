@@ -38,7 +38,7 @@ function ResultCard({ label, value, unit = '', highlight = false }) {
     <div className={`rounded-xl p-4 border ${highlight ? 'bg-malbon-green/5 border-malbon-green/20' : 'bg-white/[0.03] border-white/[0.06]'}`}>
       <div className="text-xs text-gray-500 mb-1">{label}</div>
       <div className={`text-xl font-bold ${highlight ? 'text-malbon-green-light' : 'text-white'}`}>
-        {value.toLocaleString()}{unit}
+        {value.toLocaleString('zh-CN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}{unit}
       </div>
     </div>
   )

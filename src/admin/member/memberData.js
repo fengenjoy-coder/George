@@ -86,9 +86,9 @@ export function generateMockMembers(count = 20) {
     const last = LAST_NAMES[Math.floor(i / FIRST_NAMES.length) % LAST_NAMES.length]
     const name = `${first} ${last}`
     const tier = TIERS[randomInt(0, TIERS.length - 1)]
-    const totalSpend = randomInt(2000, 200000)
-    const pointsBalance = randomInt(0, 80000)
-    const creditsTotal = randomInt(0, 500000)
+    const totalSpend = Number((Math.random() * 198000 + 2000).toFixed(2))
+    const pointsBalance = Number((Math.random() * 80000).toFixed(2))
+    const creditsTotal = Number((Math.random() * 500000).toFixed(2))
     const lastActive = formatDate(randomDate(new Date('2025-06-01'), new Date()))
     const joinDate = formatDate(randomDate(new Date('2024-01-01'), new Date('2025-05-01')))
 

@@ -105,8 +105,8 @@ export function AdminDashboard({ onExit }) {
             <div className="rounded-xl bg-white/[0.03] border border-white/[0.06] p-4">
               <div className="text-xs text-gray-500 mb-2">当前汇率</div>
               <div className="text-lg font-bold text-malbon-green-light">100P = ¥{config.exchangeRate}</div>
-              <div className="text-xs text-gray-500 mt-2">客单价 ¥{config.finance.avgPrice.toLocaleString()}</div>
-              <div className="text-xs text-gray-500">毛利率 {(config.finance.grossMargin * 100).toFixed(0)}%</div>
+              <div className="text-xs text-gray-500 mt-2">客单价 ¥{config.finance.avgPrice.toLocaleString('zh-CN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</div>
+              <div className="text-xs text-gray-500">毛利率 {(config.finance.grossMargin * 100).toFixed(2)}%</div>
             </div>
           </div>
         </aside>

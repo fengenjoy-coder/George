@@ -10,7 +10,7 @@ export function useBacktest(profile, config) {
     const multiplier = startTierInfo.pointsMultiplier || 1.0
 
     // Calculate Points from purchase
-    const purchasePoints = Math.round(annualSpend * multiplier)
+    const purchasePoints = Number((annualSpend * multiplier).toFixed(2))
 
     // Calculate Points from behaviors
     const signinPoints = activeDays * 20 // avg 20 per day with streak
@@ -57,9 +57,9 @@ export function useBacktest(profile, config) {
       behaviorCredits,
       totalCredits,
       endTier,
-      grossProfit: Math.round(grossProfit),
-      pointsCost: Math.round(pointsCost),
-      costRatio: Math.round(costRatio * 10) / 10,
+      grossProfit: Number(grossProfit.toFixed(2)),
+      pointsCost: Number(pointsCost.toFixed(2)),
+      costRatio: Number(costRatio.toFixed(2)),
       mbcProgress,
     }
   }, [profile, config])

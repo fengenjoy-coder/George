@@ -18,7 +18,7 @@ export function MemberAnalytics({ members }) {
       tierCounts[m.tier] = (tierCounts[m.tier] || 0) + 1
     })
 
-    const avgSpend = total > 0 ? Math.round(members.reduce((s, m) => s + m.totalSpend, 0) / total) : 0
+    const avgSpend = total > 0 ? Number((members.reduce((s, m) => s + m.totalSpend, 0) / total).toFixed(2)) : 0
 
     const riskMembers = members
       .filter((m) => m.status === 'dormant' || m.status === 'churned')
@@ -56,7 +56,7 @@ export function MemberAnalytics({ members }) {
           { label: '本月新增', value: stats.newThisMonth, color: 'text-malbon-green-light' },
           { label: '活跃会员', value: stats.active, color: 'text-green-400' },
           { label: '流失风险', value: stats.dormant + stats.churned, color: 'text-red-400' },
-          { label: '平均客单', value: `¥${stats.avgSpend.toLocaleString()}`, color: 'text-malbon-gold' },
+          { label: '平均客单', value: `¥${stats.avgSpend.toLocaleString('zh-CN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`, color: 'text-malbon-gold' },
         ].map((item, i) => (
           <div key={i} className="bg-dark-card border border-white/[0.06] rounded-2xl p-4">
             <div className="text-xs text-gray-500 mb-1">{item.label}</div>
@@ -151,7 +151,7 @@ export function MemberAnalytics({ members }) {
                           {m.status === 'dormant' ? '沉睡' : '流失'}
                         </span>
                       </td>
-                      <td className="py-2.5 px-3 text-right text-sm text-gray-300 font-mono">¥{m.totalSpend.toLocaleString()}</td>
+                      <td className="py-2.5 px-3 text-right text-sm text-gray-300 font-mono">¥{m.totalSpend.toLocaleString('zh-CN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td>
                       <td className="py-2.5 px-3 text-sm text-gray-500">{m.lastActive} · {daysAgo}天前</td>
                     </tr>
                   )

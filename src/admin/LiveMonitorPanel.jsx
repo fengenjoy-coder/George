@@ -3,12 +3,12 @@ import { GaugeChart } from './charts/GaugeChart'
 import { SimpleLineChart } from './charts/SimpleLineChart'
 
 const METRICS = [
-  { key: 'issueBurn', label: 'Points 发行/消耗比', max: 1.0, health: 0.75, warn: 0.5, unit: '', format: (v) => `${(v * 100).toFixed(0)}%` },
-  { key: 'avgHoldDays', label: '平均持有天数', max: 180, health: 90, warn: 135, unit: '天', format: (v) => `${Math.round(v)}天` },
-  { key: 'dormantRatio', label: '沉睡 Points 占比', max: 50, health: 20, warn: 30, unit: '%', format: (v) => `${Math.round(v)}%` },
-  { key: 'redemptionRate', label: '权益兑换率', max: 60, health: 30, warn: 20, unit: '%', format: (v) => `${Math.round(v)}%` },
-  { key: 'avgBalance', label: '单用户平均余额', max: 15000, health: 5000, warn: 10000, unit: '', format: (v) => Math.round(v).toLocaleString() },
-  { key: 'costRatio', label: '营销成本占 GMV', max: 10, health: 5, warn: 8, unit: '%', format: (v) => `${v.toFixed(1)}%` },
+  { key: 'issueBurn', label: 'Points 发行/消耗比', max: 1.0, health: 0.75, warn: 0.5, unit: '', format: (v) => `${(v * 100).toFixed(2)}%` },
+  { key: 'avgHoldDays', label: '平均持有天数', max: 180, health: 90, warn: 135, unit: '天', format: (v) => `${v.toFixed(2)}天` },
+  { key: 'dormantRatio', label: '沉睡 Points 占比', max: 50, health: 20, warn: 30, unit: '%', format: (v) => `${v.toFixed(2)}%` },
+  { key: 'redemptionRate', label: '权益兑换率', max: 60, health: 30, warn: 20, unit: '%', format: (v) => `${v.toFixed(2)}%` },
+  { key: 'avgBalance', label: '单用户平均余额', max: 15000, health: 5000, warn: 10000, unit: '', format: (v) => v.toLocaleString('zh-CN', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) },
+  { key: 'costRatio', label: '营销成本占 GMV', max: 10, health: 5, warn: 8, unit: '%', format: (v) => `${v.toFixed(2)}%` },
 ]
 
 function generateTrendData(base, variance) {
