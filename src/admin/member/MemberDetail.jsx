@@ -71,7 +71,7 @@ export function MemberDetail({ member, onClose, onEdit, onAdjustPoints }) {
               {profile.height && profile.weight && (
                 <div className="flex items-center gap-2 text-sm text-gray-300">
                   <span>📏</span>
-                  <span>{profile.height}cm / {profile.weight}kg</span>
+                  <span>{Number(profile.height).toFixed(2)}cm / {Number(profile.weight).toFixed(2)}kg</span>
                   {profile.fitPreference && <span className="text-gray-500">· {profile.fitPreference}版型</span>}
                 </div>
               )}
